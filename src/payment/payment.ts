@@ -5,8 +5,8 @@ export interface PayStackRequestBody {
   method: string
   baseURL: 'https://api.paystack.co/'
   url: string
-  headers: any
-  data?: any
+  headers: unknown
+  data?: unknown
 }
 
 export interface DebitDataBody extends PayStackRequestBody {

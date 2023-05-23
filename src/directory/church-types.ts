@@ -38,9 +38,12 @@ export interface Member {
 }
 export interface Church {
   id: string
+  __typename: ChurchLevel
   name: string
+  leader: Member
   levelName: ChurchLevel
 }
+
 export interface Stream extends Church {
   arrivalEndTime: string
   arrivalsPrefix: string
