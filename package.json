@@ -10,11 +10,9 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "rollup": "rollup -c",
-    "test": "jest --watch",
     "release:major": "node scripts/release.js major",
     "release:minor": "node scripts/release.js minor",
     "release:patch": "node scripts/release.js patch",
-    "release:test": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md'",
     "prepare": "husky install"
   },
   "browser": {
@@ -62,10 +60,7 @@
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@rollup/plugin-terser": "^0.4.1",
     "@rollup/plugin-typescript": "^11.1.0",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@types/jest": "^29.5.0",
     "@typescript-eslint/eslint-plugin": "^5.59.7",
-    "babel-jest": "^29.5.0",
     "concurrently": "^8.0.1",
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^8.8.0",
