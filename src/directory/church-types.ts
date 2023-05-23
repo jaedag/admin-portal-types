@@ -1,3 +1,5 @@
+import { Member } from './directory-types'
+
 export type ChurchLevel =
   | 'Fellowship'
   | 'Bacenta'
@@ -13,31 +15,6 @@ export type ChurchLevel =
   | 'Ministry'
   | 'Federalministry'
 
-export interface Member {
-  hasCampAttendance: boolean
-  visitationArea: string
-  lastName: string
-  nameWithTitle: string
-  auth_id: string
-  imclChecked: boolean
-  pictureUrl: string
-  areaOfResidence: string
-  howYouJoined: string
-  hasBibleTranslations: boolean
-  whatsappNumber: string
-  firstName: string
-  graduatedUnderstandingSchools: string[]
-  phoneNumber: string
-  attendedCampsWithOtherBishops: string[]
-  hasAudioCollections: boolean
-  attendedCampsWithProphet: boolean
-  location: Point
-  middleName: string
-  id: string
-  hasHolyGhostBaptism: boolean
-  hasWaterBaptism: boolean
-  email: string
-}
 export interface Church {
   id: string
   __typename: ChurchLevel
@@ -58,14 +35,4 @@ export interface Stream extends Church {
   mobilisationEndTime: string
   mobilisationStartTime: string
   arrivalStartTime: string
-}
-
-type Point = {
-  srid: {
-    low: number
-    high: number
-  }
-  x: number
-  y: number
-  z?: undefined
 }
