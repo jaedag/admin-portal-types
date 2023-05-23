@@ -5,6 +5,7 @@ export type ChurchLevel =
   | 'Council'
   | 'Stream'
   | 'GatheringService'
+  | 'Campus'
   | 'Oversight'
   | 'Denomination'
   | 'Sonta'
@@ -16,6 +17,7 @@ export interface Member {
   hasCampAttendance: boolean
   visitationArea: string
   lastName: string
+  nameWithTitle: string
   auth_id: string
   imclChecked: boolean
   pictureUrl: string
