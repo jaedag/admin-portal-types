@@ -1,5 +1,16 @@
 #### 1.0.1 (2023-05-23)
 
+##### Documentation Changes
+
+*  update CHANGELOG.md and version bump ([ea317efe](https://github.com/jaedag/admin-portal-types/commit/ea317efe643a2f17de3b445dba70302814438198))
+
+##### New Features
+
+*  version bump ([087b8478](https://github.com/jaedag/admin-portal-types/commit/087b8478af5500e7b26f974e20b2236de452278f))
+*  initial commit ([03e88784](https://github.com/jaedag/admin-portal-types/commit/03e88784add93dd123c3a02caadb3059f9ebc947))
+
+#### 1.0.1 (2023-05-23)
+
 ##### New Features
 
 *  version bump ([087b8478](https://github.com/jaedag/admin-portal-types/commit/087b8478af5500e7b26f974e20b2236de452278f))
