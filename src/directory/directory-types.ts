@@ -23,6 +23,8 @@ export interface Member {
   whatsappNumber: string
   phoneNumber: string
   fellowship: Church
+  ministry: Church
+
   hasCampAttendance: boolean
   visitationArea: string
   imclChecked: boolean
