@@ -26,7 +26,7 @@ export interface Church {
 export interface Stream extends Church {
   arrivalEndTime: string
   arrivalsPrefix: string
-  accountName:
+  bankAccount:
     | 'aes_account'
     | 'ges_account'
     | 'hge_account'
