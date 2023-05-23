@@ -1,5 +1,11 @@
 export type Network = 'MTN' | 'Vodafone' | 'AirtelTigo' | 'Airtel' | 'Tigo'
 export type NetworkCode = 'mtn' | 'vod' | 'tgo'
+export type streamAccountType =
+  | 'aes_account'
+  | 'ges_account'
+  | 'hge_account'
+  | 'fle_account'
+  | 'manual'
 
 export interface PayStackRequestBody {
   method: string
