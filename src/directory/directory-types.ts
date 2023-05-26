@@ -11,13 +11,26 @@ type Point = {
   z?: undefined
 }
 
-export interface Member {
+export interface MemberWithoutBioData {
+  __typename: 'Member'
+  id: string
+  // eslint-disable-next-line camelcase
+  auth_id?: string
+  firstName: string
+  lastName: string
+  fullName: string
+  pictureUrl: string
+  nameWithTitle: string
+}
+
+export interface Member extends MemberWithoutBioData {
   id: string
   auth_id: string
   firstName: string
   lastName: string
-  nameWithTitle: string
   middleName: string
+  nameWithTitle: string
+  currentTitle: TitleOptions
   email: string
   pictureUrl: string
   whatsappNumber: string
