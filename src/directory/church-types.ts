@@ -6,7 +6,7 @@ export type ChurchLevel =
   | 'Constituency'
   | 'Council'
   | 'Stream'
-  | 'GatheringService'
+  | 'Campus'
   | 'Campus'
   | 'Oversight'
   | 'Denomination'
