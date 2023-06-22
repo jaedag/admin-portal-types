@@ -18,10 +18,10 @@ export type ChurchLevel =
 export interface Church {
   id: string
   __typename: ChurchLevel
+  levelName: ChurchLevel
   name: string
   leader: Member
   vacationStatus: 'Active' | 'Vacation' | 'Online'
-  levelName: ChurchLevel
   sprinterTopUp?: number
   urvanTopUp?: number
 }

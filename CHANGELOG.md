@@ -1,5 +1,15 @@
 #### 1.0.14 (2023-06-22)
 
+##### Documentation Changes
+
+*  update CHANGELOG.md and version bump ([76207d5a](https://github.com/jaedag/admin-portal-types/commit/76207d5a48b88c03791eafc049ce31a9991a9a35))
+
+##### Bug Fixes
+
+*  add topup properties ([53e8b627](https://github.com/jaedag/admin-portal-types/commit/53e8b62723b442b729d8822fe40b7fd9a57d3d04))
+
+#### 1.0.14 (2023-06-22)
+
 #### 1.0.13 (2023-06-22)
 
 #### 1.0.12 (2023-06-21)
