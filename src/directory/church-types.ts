@@ -22,6 +22,8 @@ export interface Church {
   leader: Member
   vacationStatus: 'Active' | 'Vacation' | 'Online'
   levelName: ChurchLevel
+  sprinterTopUp?: number
+  urvanTopUp?: number
 }
 
 export interface Stream extends Church {
