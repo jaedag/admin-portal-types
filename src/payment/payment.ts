@@ -12,7 +12,7 @@ export interface PayStackRequestBody {
   baseURL: 'https://api.paystack.co/'
   url: string
   headers: {
-    'Content-Type': 'application/json'
+    'content-type': 'application/json'
     Authorization: string
   }
   data?: unknown
