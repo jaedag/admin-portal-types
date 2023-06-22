@@ -20,6 +20,7 @@ export interface Church {
   __typename: ChurchLevel
   name: string
   leader: Member
+  vacationStatus: 'Active' | 'Vacation' | 'Online'
   levelName: ChurchLevel
 }
 
