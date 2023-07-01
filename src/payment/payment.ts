@@ -7,6 +7,25 @@ export type streamAccountType =
   | 'fle_account'
   | 'manual'
 
+export const getMobileCode = (network: Network): NetworkCode => {
+  switch (network) {
+    case 'MTN':
+      return 'mtn'
+    case 'Vodafone':
+      return 'vod'
+    case 'AirtelTigo':
+      return 'tgo'
+    case 'Airtel':
+      return 'tgo'
+    case 'Tigo':
+      return 'tgo'
+    default:
+      break
+  }
+
+  return 'mtn'
+}
+
 export interface PayStackRequestBody {
   method: string
   baseURL: 'https://api.paystack.co/'
