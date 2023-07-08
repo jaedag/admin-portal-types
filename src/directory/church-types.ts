@@ -10,10 +10,10 @@ export type ChurchLevel =
   | 'Campus'
   | 'Oversight'
   | 'Denomination'
-  | 'Sonta'
+  | 'HubFellowship'
   | 'Hub'
   | 'Ministry'
-  | 'Federalministry'
+  | 'CreativeArts'
 
 export interface Church {
   id: string
