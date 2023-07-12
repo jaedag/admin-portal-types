@@ -39,5 +39,6 @@ export interface Member {
   attendedCampsWithProphet: boolean
   location: Point
   hasHolyGhostBaptism: boolean
+  hasHolyGhostBaptismDate: Date
   hasWaterBaptism: boolean
 }
