@@ -1,6 +1,6 @@
 {
   "name": "@jaedag/admin-portal-types",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "Types for working with admin-portal",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
