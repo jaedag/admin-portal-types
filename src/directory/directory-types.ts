@@ -27,18 +27,29 @@ export interface Member {
   fellowship: Church
   ministry: Church
 
-  hasCampAttendance: boolean
+  dob: TimeGraph
+  gender: Gender
+  maritalStatus: MaritalStatus
+  occupation: Occupation
+
   visitationArea: string
   imclChecked: boolean
   areaOfResidence: string
-  howYouJoined: string
-  hasBibleTranslations: boolean
-  graduatedUnderstandingSchools: string[]
-  attendedCampsWithOtherBishops: string[]
-  hasAudioCollections: boolean
-  attendedCampsWithProphet: boolean
   location: Point
-  hasHolyGhostBaptism: boolean
-  hasHolyGhostBaptismDate: Date
-  hasWaterBaptism: boolean
+}
+
+type TimeGraph = {
+  date: string
+}
+
+type Gender = {
+  gender: 'Male' | 'Female'
+}
+
+type MaritalStatus = {
+  maritalStatus: 'Single' | 'Married'
+}
+
+type Occupation = {
+  occupation: string
 }
