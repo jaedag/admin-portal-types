@@ -202,6 +202,9 @@ export const permitAdminArrivals = (churchLevel: ChurchLevel) => {
   return [...permitAdmin(churchLevel), ...permitArrivals(churchLevel)]
 }
 
+export const permitArrivalsPayer = (): Role[] => {
+  return ['arrivalsPayerCouncil']
+}
 export const permitMe = (churchLevel: ChurchLevel) => {
   return [
     ...permitLeaderAdmin(churchLevel),

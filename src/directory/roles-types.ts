@@ -21,7 +21,7 @@ export type Role =
   | 'arrivalsAdminCouncil'
   | 'arrivalsAdminConstituency'
   | 'arrivalsCounterStream'
-  | 'arrivalsPayerStream'
+  | 'arrivalsPayerCouncil'
   | 'tellerStream'
   | 'sheepseekerStream'
   | 'all'
