@@ -12,6 +12,7 @@ export type ChurchLevel =
   | 'Denomination'
   | 'HubFellowship'
   | 'Hub'
+  | 'HubCouncil'
   | 'Ministry'
   | 'CreativeArts'
 
