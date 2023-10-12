@@ -1,5 +1,6 @@
 import { Member } from './directory-types'
 import { TimeGraph } from './neo4j-types'
+import { BussingRecord, ServiceRecord } from './service-types'
 
 export type ChurchLevel =
   | 'Fellowship'
@@ -38,6 +39,7 @@ export interface Church {
   hubs?: Church[]
   lowerChurch?: Church[]
   memberCount: number
+  services: ServiceRecord[]
   history: HistoryLog[]
 }
 
@@ -92,18 +94,40 @@ export interface Stream extends Church {
   councils?: Council[]
 }
 
-export interface Constituency extends Church {
-  __typename: 'Constituency'
-  stream: Stream
-  council: Council
-}
-
 export interface Council extends Church {
   __typename: 'Council'
   stream: Stream
   hubCouncils?: HubCouncil[]
   constituencies?: Constituency[]
   hubCouncilsFromMinistry?: HubCouncil[]
+}
+
+export interface Constituency extends Church {
+  __typename: 'Constituency'
+  stream: Stream
+  council: Council
+}
+
+export interface Fellowship extends Church {
+  __typename: 'Fellowship'
+  bacenta: Bacenta
+  bankingCode: number
+  vacationStatus: VacationStatusOptions
+  meetingDay: {
+    day: 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday'
+  }
+}
+
+export interface Bacenta extends Church {
+  __typename: 'Bacenta'
+  constituency: Constituency
+  arrivalsCodeOfTheDay: string
+  momoNumber: string
+  outbound: boolean
+  sprinterTopUp: number
+  urvanTopUp: number
+  bussing: BussingRecord[]
+  bussingThisWeek: BussingRecord
 }
 
 export interface CreativeArts extends Church {
