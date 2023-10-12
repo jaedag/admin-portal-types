@@ -30,6 +30,7 @@ export type HistoryLog = {
 
 export interface Church {
   id: string
+  name: string
   __typename: ChurchLevel
   levelName: ChurchLevel
   leader: Member
@@ -56,17 +57,18 @@ export interface HigherChurch extends Church {
 
 export interface Denomination extends Church {
   __typename: 'Denomination'
-  oversight: Oversight
+  oversights: Oversight
 }
 
 export interface Oversight extends Church {
   __typename: 'Oversight'
+  denomination: Denomination
   streams: Stream
 }
 export interface Campus extends Church {
   __typename: 'Campus'
-  streams?: Stream[]
   oversight: Oversight
+  streams?: Stream[]
   creativeArts?: CreativeArts[]
 }
 
