@@ -1,4 +1,5 @@
 import { Church } from './church-types'
+import { TimeGraph } from './neo4j-types'
 
 export type TitleOptions = 'Pastor' | 'Reverend' | 'Bishop'
 type Point = {
@@ -36,10 +37,6 @@ export interface Member {
   imclChecked: boolean
   areaOfResidence: string
   location: Point
-}
-
-type TimeGraph = {
-  date: string
 }
 
 type Gender = {
