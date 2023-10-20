@@ -1,17 +1,12 @@
 import { ChurchLevel, Role } from '..'
 
-export const isAuthorised = (permittedRoles: Role[], userRoles: Role[]) => {
-  if (permittedRoles?.includes('all')) {
-    return true
-  }
-
-  return permittedRoles?.some((r) => userRoles.includes(r))
-}
+// Permissions Things
 export const permitLeader = (churchLevel: ChurchLevel) => {
   let permittedFor: Role[] = []
   switch (churchLevel.toLowerCase()) {
     case 'fellowship':
       permittedFor = [
+        'leaderDenomination',
         'leaderOversight',
         'leaderCampus',
         'leaderStream',
@@ -26,6 +21,7 @@ export const permitLeader = (churchLevel: ChurchLevel) => {
       break
     case 'bacenta':
       permittedFor = [
+        'leaderDenomination',
         'leaderOversight',
         'leaderCampus',
         'leaderStream',
@@ -36,6 +32,7 @@ export const permitLeader = (churchLevel: ChurchLevel) => {
       break
     case 'constituency':
       permittedFor = [
+        'leaderDenomination',
         'leaderOversight',
         'leaderCampus',
         'leaderStream',
@@ -45,6 +42,7 @@ export const permitLeader = (churchLevel: ChurchLevel) => {
       break
     case 'councils':
       permittedFor = [
+        'leaderDenomination',
         'leaderOversight',
         'leaderCampus',
         'leaderStream',
@@ -52,15 +50,23 @@ export const permitLeader = (churchLevel: ChurchLevel) => {
       ]
       break
     case 'stream':
-      permittedFor = ['leaderOversight', 'leaderCampus', 'leaderStream']
+      permittedFor = [
+        'leaderDenomination',
+        'leaderOversight',
+        'leaderCampus',
+        'leaderStream',
+      ]
       break
     case 'campus':
-      permittedFor = ['leaderOversight', 'leaderCampus']
+      permittedFor = ['leaderDenomination', 'leaderOversight', 'leaderCampus']
       break
     case 'oversight':
-      permittedFor = ['leaderOversight']
+      permittedFor = ['leaderDenomination', 'leaderOversight']
       break
-    case 'creativeart':
+    case 'denomination':
+      permittedFor = ['leaderDenomination']
+      break
+    case 'creativearts':
       permittedFor = ['leaderCampus', 'leaderCreativeArts']
       break
     case 'ministry':
@@ -71,12 +77,23 @@ export const permitLeader = (churchLevel: ChurchLevel) => {
         'leaderMinistry',
       ]
       break
+    case 'hubcouncil':
+      permittedFor = [
+        'leaderCampus',
+        'leaderCreativeArts',
+        'leaderStream',
+        'leaderMinistry',
+        'leaderHubCouncil',
+        'leaderHub',
+      ]
+      break
     case 'hub':
       permittedFor = [
         'leaderCampus',
         'leaderCreativeArts',
         'leaderStream',
         'leaderMinistry',
+        'leaderHubCouncil',
         'leaderHub',
       ]
       break
@@ -94,8 +111,18 @@ export const permitAdmin = (churchLevel: ChurchLevel) => {
     case 'Fellowship':
     case 'Bacenta':
     case 'Hub':
+      permittedFor = [
+        'adminMinistry',
+        'adminCreativeArts',
+        'adminConstituency',
+        'adminCouncil',
+        'adminStream',
+        'adminCampus',
+      ]
+      break
     case 'Constituency':
       permittedFor = [
+        'adminDenomination',
         'adminOversight',
         'adminCampus',
         'adminStream',
@@ -106,6 +133,7 @@ export const permitAdmin = (churchLevel: ChurchLevel) => {
 
     case 'Council':
       permittedFor = [
+        'adminDenomination',
         'adminOversight',
         'adminCampus',
         'adminStream',
@@ -113,13 +141,21 @@ export const permitAdmin = (churchLevel: ChurchLevel) => {
       ]
       break
     case 'Stream':
-      permittedFor = ['adminOversight', 'adminCampus', 'adminStream']
+      permittedFor = [
+        'adminDenomination',
+        'adminOversight',
+        'adminCampus',
+        'adminStream',
+      ]
       break
     case 'Campus':
-      permittedFor = ['adminOversight', 'adminCampus']
+      permittedFor = ['adminDenomination', 'adminOversight', 'adminCampus']
       break
     case 'Oversight':
-      permittedFor = ['adminOversight', 'adminCampus']
+      permittedFor = ['adminDenomination', 'adminOversight']
+      break
+    case 'Denomination':
+      permittedFor = ['adminDenomination']
       break
     case 'CreativeArts':
       permittedFor = ['adminCampus', 'adminCreativeArts']
@@ -135,11 +171,21 @@ export const permitAdmin = (churchLevel: ChurchLevel) => {
   return permittedFor
 }
 
-export const permitLeaderAdmin = (churchLevel: ChurchLevel) => {
+export const permitLeaderAdmin = (churchLevel: ChurchLevel): Role[] => {
   return [...permitLeader(churchLevel), ...permitAdmin(churchLevel)]
 }
 
-export const permitArrivals = (churchLevel: ChurchLevel) => {
+export const permitMe = (churchLevel: ChurchLevel): Role[] => {
+  return [
+    ...permitLeaderAdmin(churchLevel),
+    ...permitArrivals(churchLevel),
+    ...permitArrivalsHelpers(churchLevel),
+    ...permitTellerStream(),
+    ...permitSheepSeeker(),
+  ]
+}
+
+export const permitArrivals = (churchLevel: ChurchLevel): Role[] => {
   let permittedFor: Role[] = []
   switch (churchLevel) {
     case 'Fellowship':
@@ -177,38 +223,37 @@ export const permitArrivals = (churchLevel: ChurchLevel) => {
       break
   }
 
-  return [...permitAdmin(churchLevel), ...permittedFor]
+  if (churchLevel === 'Stream') {
+    return [...permitAdmin(churchLevel), ...permittedFor]
+  }
+  return permittedFor
 }
 
 export const permitArrivalsCounter = (): Role[] => {
   return ['arrivalsCounterStream']
 }
-
-export const permitArrivalsHelpers = (): Role[] => {
-  return ['arrivalsCounterStream']
+export const permitArrivalsPayer = (): Role[] => {
+  return ['arrivalsPayerCouncil']
 }
-export const permitTeller = (): Role[] => {
+
+export const permitArrivalsHelpers = (churchLevel: ChurchLevel): Role[] => {
+  if (churchLevel === 'Stream') {
+    return ['arrivalsCounterStream', 'arrivalsPayerCouncil']
+  }
+  return []
+}
+export const permitLeaderAdminArrivals = (churchLevel: ChurchLevel): Role[] => {
+  return [...permitLeaderAdmin(churchLevel), ...permitArrivals(churchLevel)]
+}
+
+export const permitAdminArrivals = (churchLevel: ChurchLevel): Role[] => {
+  return [...permitAdmin(churchLevel), ...permitArrivals(churchLevel)]
+}
+
+export const permitTellerStream = (): Role[] => {
   return ['tellerStream']
 }
 
 export const permitSheepSeeker = (): Role[] => {
   return ['sheepseekerStream']
-}
-export const permitLeaderAdminArrivals = (churchLevel: ChurchLevel) => {
-  return [...permitLeaderAdmin(churchLevel), ...permitArrivals(churchLevel)]
-}
-
-export const permitAdminArrivals = (churchLevel: ChurchLevel) => {
-  return [...permitAdmin(churchLevel), ...permitArrivals(churchLevel)]
-}
-
-export const permitArrivalsPayer = (): Role[] => {
-  return ['arrivalsPayerCouncil']
-}
-export const permitMe = (churchLevel: ChurchLevel) => {
-  return [
-    ...permitLeaderAdmin(churchLevel),
-    ...permitArrivals(churchLevel),
-    ...permitArrivalsHelpers(),
-  ]
 }
