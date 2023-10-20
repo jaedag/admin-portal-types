@@ -1,5 +1,13 @@
 import { ChurchLevel, Role } from '..'
 
+export const isAuthorised = (permittedRoles: Role[], userRoles: Role[]) => {
+  if (permittedRoles?.includes('all')) {
+    return true
+  }
+
+  return permittedRoles?.some((r) => userRoles.includes(r))
+}
+
 // Permissions Things
 export const permitLeader = (churchLevel: ChurchLevel) => {
   let permittedFor: Role[] = []
