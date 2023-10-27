@@ -29,6 +29,7 @@ export interface Member {
   ministry: Church
 
   dob: TimeGraph
+  title: Title
   gender: Gender
   maritalStatus: MaritalStatus
   occupation: Occupation
@@ -44,9 +45,13 @@ type Gender = {
 }
 
 type MaritalStatus = {
-  maritalStatus: 'Single' | 'Married'
+  status: 'Single' | 'Married'
 }
 
 type Occupation = {
   occupation: string
+}
+
+type Title = {
+  name: TitleOptions
 }

@@ -19,3 +19,14 @@ export const repackDecimals = (decimal: string | number) => {
 
   return parseFloat(decimal.toString())
 }
+
+export const getFirstLetterInEveryWord = (string: string) => {
+  if (string === null || string === undefined || string === '') return ''
+
+  const words = string.split(' ')
+  let initials = ''
+  words.forEach((word) => {
+    initials += word.charAt(0) + '. '
+  })
+  return initials
+}
