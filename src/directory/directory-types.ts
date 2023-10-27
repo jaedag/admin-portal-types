@@ -2,6 +2,9 @@ import { Church } from './church-types'
 import { TimeGraph } from './neo4j-types'
 
 export type TitleOptions = 'Pastor' | 'Reverend' | 'Bishop'
+export type GenderOptions = 'Male' | 'Female'
+export type MaritalStatusOptions = 'Single' | 'Married'
+
 type Point = {
   srid: {
     low: number
@@ -41,11 +44,11 @@ export interface Member {
 }
 
 type Gender = {
-  gender: 'Male' | 'Female'
+  gender: GenderOptions
 }
 
 type MaritalStatus = {
-  status: 'Single' | 'Married'
+  status: MaritalStatusOptions
 }
 
 type Occupation = {
