@@ -12,6 +12,7 @@ export type ChurchLevel =
   | 'Campus'
   | 'Oversight'
   | 'Denomination'
+  | 'ChurchInsights'
   | 'HubFellowship'
   | 'Hub'
   | 'HubCouncil'
@@ -55,6 +56,11 @@ export interface HigherChurch extends Church {
   hubCount: number
   ministryCount: number
   target: number
+}
+
+export interface ChurchInsights extends Church {
+  __typename: 'ChurchInsights'
+  denominations: Denomination[]
 }
 
 export interface Denomination extends Church {
