@@ -187,7 +187,7 @@ export const permitMe = (churchLevel: ChurchLevel): Role[] => {
   return [
     ...permitLeaderAdmin(churchLevel),
     ...permitArrivals(churchLevel),
-    ...permitArrivalsHelpers(churchLevel),
+    ...permitArrivalsHelpers(),
     ...permitTellerStream(),
     ...permitSheepSeeker(),
   ]
