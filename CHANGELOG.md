@@ -1,5 +1,11 @@
 #### 1.0.35 (2023-11-02)
 
+##### Documentation Changes
+
+*  update CHANGELOG.md and version bump ([c92de6cb](https://github.com/jaedag/admin-portal-types/commit/c92de6cbe60ed903fa095119fa177bd15a5c3840))
+
+#### 1.0.35 (2023-11-02)
+
 #### 1.0.34 (2023-10-29)
 
 #### 1.0.33 (2023-10-29)
