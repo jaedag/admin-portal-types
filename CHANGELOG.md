@@ -2,6 +2,13 @@
 
 ##### Documentation Changes
 
+*  update CHANGELOG.md and version bump ([a08d5740](https://github.com/jaedag/admin-portal-types/commit/a08d57406869a5dd5818dfa935af0131b945194b))
+*  update CHANGELOG.md and version bump ([14d94a51](https://github.com/jaedag/admin-portal-types/commit/14d94a5150122f6dc6c108c17a5917a12b76ac61))
+
+#### 1.3.4 (2023-11-02)
+
+##### Documentation Changes
+
 *  update CHANGELOG.md and version bump ([14d94a51](https://github.com/jaedag/admin-portal-types/commit/14d94a5150122f6dc6c108c17a5917a12b76ac61))
 
 #### 1.3.4 (2023-11-02)
