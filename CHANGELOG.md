@@ -1,17 +1,19 @@
-#### 1.0.33 (2023-11-02)
+#### 1.0.34 (2023-10-29)
+
+#### 1.0.33 (2023-10-29)
 
 ##### Documentation Changes
 
-*  update CHANGELOG.md and version bump ([e6cfd495](https://github.com/jaedag/admin-portal-types/commit/e6cfd4953ac3d1048d55128466fa5db62cb3a9a0))
-*  update CHANGELOG.md and version bump ([1e0229bf](https://github.com/jaedag/admin-portal-types/commit/1e0229bfe345bcac177e39703dcd51dbf3ee017a))
+*  update CHANGELOG.md and version bump ([8f6e3a52](https://github.com/jaedag/admin-portal-types/commit/8f6e3a52b6900dec8d39c03c224f5e9e0ce5bbd4))
+*  update CHANGELOG.md and version bump ([c6f1cd95](https://github.com/jaedag/admin-portal-types/commit/c6f1cd956a3617ca443b08d89b211bc9e762c340))
 
-#### 1.0.33 (2023-11-02)
+#### 1.0.33 (2023-10-29)
 
 ##### Documentation Changes
 
-*  update CHANGELOG.md and version bump ([1e0229bf](https://github.com/jaedag/admin-portal-types/commit/1e0229bfe345bcac177e39703dcd51dbf3ee017a))
+*  update CHANGELOG.md and version bump ([c6f1cd95](https://github.com/jaedag/admin-portal-types/commit/c6f1cd956a3617ca443b08d89b211bc9e762c340))
 
-#### 1.0.33 (2023-11-02)
+#### 1.0.33 (2023-10-29)
 
 #### 1.0.32 (2023-10-27)
 
