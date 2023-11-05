@@ -80,6 +80,7 @@ export interface Stream extends Church {
   __typename: 'Stream'
   bankAccount: string
   campus: Campus
+  vacationStatus: VacationStatusOptions
   meetingDay: {
     day: 'Friday' | 'Saturday' | 'Sunday'
     dayNumber: number
@@ -120,6 +121,7 @@ export interface Fellowship extends Church {
 
 export interface Bacenta extends Church {
   __typename: 'Bacenta'
+  vacationStatus: VacationStatusOptions
   constituency: Constituency
   arrivalsCodeOfTheDay: string
   momoNumber: string
