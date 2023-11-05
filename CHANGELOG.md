@@ -1,3 +1,89 @@
+#### 1.3.4 (2023-11-02)
+
+##### Documentation Changes
+
+*  update CHANGELOG.md and version bump ([a08d5740](https://github.com/jaedag/admin-portal-types/commit/a08d57406869a5dd5818dfa935af0131b945194b))
+*  update CHANGELOG.md and version bump ([14d94a51](https://github.com/jaedag/admin-portal-types/commit/14d94a5150122f6dc6c108c17a5917a12b76ac61))
+
+#### 1.3.4 (2023-11-02)
+
+##### Documentation Changes
+
+*  update CHANGELOG.md and version bump ([14d94a51](https://github.com/jaedag/admin-portal-types/commit/14d94a5150122f6dc6c108c17a5917a12b76ac61))
+
+#### 1.3.4 (2023-11-02)
+
+#### 1.3.3 (2023-11-02)
+
+#### 1.3.2 (2023-11-02)
+
+##### Documentation Changes
+
+*  update CHANGELOG.md and version bump ([946388e4](https://github.com/jaedag/admin-portal-types/commit/946388e489d1c87e62646a0c7316d7d77e9c58bf))
+*  update CHANGELOG.md and version bump ([6717a689](https://github.com/jaedag/admin-portal-types/commit/6717a689105995e35ffcff2836dad53ba7202715))
+*  update CHANGELOG.md and version bump ([638632e6](https://github.com/jaedag/admin-portal-types/commit/638632e67734516c61f2f27f95bba0de7d15d04d))
+
+#### 1.3.2 (2023-11-02)
+
+##### Documentation Changes
+
+*  update CHANGELOG.md and version bump ([6717a689](https://github.com/jaedag/admin-portal-types/commit/6717a689105995e35ffcff2836dad53ba7202715))
+*  update CHANGELOG.md and version bump ([638632e6](https://github.com/jaedag/admin-portal-types/commit/638632e67734516c61f2f27f95bba0de7d15d04d))
+
+#### 1.3.2 (2023-11-02)
+
+##### Documentation Changes
+
+*  update CHANGELOG.md and version bump ([638632e6](https://github.com/jaedag/admin-portal-types/commit/638632e67734516c61f2f27f95bba0de7d15d04d))
+
+#### 1.3.2 (2023-11-02)
+
+### 1.2.0 (2023-11-02)
+
+##### Documentation Changes
+
+*  update CHANGELOG.md and version bump ([dfe5096b](https://github.com/jaedag/admin-portal-types/commit/dfe5096b0d6911d16be5920a1f47aea92018d2e8))
+*  update CHANGELOG.md and version bump ([1f1b82d9](https://github.com/jaedag/admin-portal-types/commit/1f1b82d9b739dbc00deaece54b2eac4ca93b2a52))
+*  update CHANGELOG.md and version bump ([ccae9c8e](https://github.com/jaedag/admin-portal-types/commit/ccae9c8eae0109f2e9226f6ad336eab965d1afd5))
+
+### 1.2.0 (2023-11-02)
+
+##### Documentation Changes
+
+*  update CHANGELOG.md and version bump ([1f1b82d9](https://github.com/jaedag/admin-portal-types/commit/1f1b82d9b739dbc00deaece54b2eac4ca93b2a52))
+*  update CHANGELOG.md and version bump ([ccae9c8e](https://github.com/jaedag/admin-portal-types/commit/ccae9c8eae0109f2e9226f6ad336eab965d1afd5))
+
+### 1.2.0 (2023-11-02)
+
+##### Documentation Changes
+
+*  update CHANGELOG.md and version bump ([ccae9c8e](https://github.com/jaedag/admin-portal-types/commit/ccae9c8eae0109f2e9226f6ad336eab965d1afd5))
+
+### 1.2.0 (2023-11-02)
+
+#### 1.0.35 (2023-11-02)
+
+##### Documentation Changes
+
+*  update CHANGELOG.md and version bump ([f7a5ff10](https://github.com/jaedag/admin-portal-types/commit/f7a5ff102c198f93013e7a0457c2da3c8942dd4a))
+*  update CHANGELOG.md and version bump ([d9dc1496](https://github.com/jaedag/admin-portal-types/commit/d9dc14962d047df61b81de5fdb9c381fff6ca457))
+*  update CHANGELOG.md and version bump ([c92de6cb](https://github.com/jaedag/admin-portal-types/commit/c92de6cbe60ed903fa095119fa177bd15a5c3840))
+
+#### 1.0.35 (2023-11-02)
+
+##### Documentation Changes
+
+*  update CHANGELOG.md and version bump ([d9dc1496](https://github.com/jaedag/admin-portal-types/commit/d9dc14962d047df61b81de5fdb9c381fff6ca457))
+*  update CHANGELOG.md and version bump ([c92de6cb](https://github.com/jaedag/admin-portal-types/commit/c92de6cbe60ed903fa095119fa177bd15a5c3840))
+
+#### 1.0.35 (2023-11-02)
+
+##### Documentation Changes
+
+*  update CHANGELOG.md and version bump ([c92de6cb](https://github.com/jaedag/admin-portal-types/commit/c92de6cbe60ed903fa095119fa177bd15a5c3840))
+
+#### 1.0.35 (2023-11-02)
+
 #### 1.0.34 (2023-10-29)
 
 #### 1.0.33 (2023-10-29)
