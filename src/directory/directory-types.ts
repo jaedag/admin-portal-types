@@ -16,6 +16,7 @@ type Point = {
 }
 
 export interface Member {
+  __typename: 'Member'
   id: string
   auth_id: string
   firstName: string
