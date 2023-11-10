@@ -65,13 +65,13 @@ export interface ChurchInsights extends Church {
 
 export interface Denomination extends Church {
   __typename: 'Denomination'
-  oversights: Oversight
+  oversights?: Oversight[]
 }
 
 export interface Oversight extends Church {
   __typename: 'Oversight'
   denomination: Denomination
-  streams: Stream
+  campuses?: Campus[]
 }
 export interface Campus extends Church {
   __typename: 'Campus'
