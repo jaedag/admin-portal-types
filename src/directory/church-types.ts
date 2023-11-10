@@ -65,7 +65,7 @@ export interface ChurchInsights extends Church {
 
 export interface Denomination extends Church {
   __typename: 'Denomination'
-  churchInsights: ChurchInsightsssssssssssssssssssssss
+  churchInsights: ChurchInsights
   oversights?: Oversight[]
 }
 
