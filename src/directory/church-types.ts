@@ -65,6 +65,7 @@ export interface ChurchInsights extends Church {
 
 export interface Denomination extends Church {
   __typename: 'Denomination'
+  churchInsights: ChurchInsightsssssssssssssssssssssss
   oversights?: Oversight[]
 }
 
@@ -111,31 +112,31 @@ export interface Council extends Church {
 
 export interface Constituency extends Church {
   __typename: 'Constituency'
-  stream: Stream
   council: Council
+  bacentas: Bacenta[]
+}
+
+export interface Bacenta extends Church {
+  __typename: 'Bacenta'
+  constituency: Constituency
+  vacationStatus: VacationStatusOptions
+  arrivalsCodeOfTheDay: string
+  momoNumber?: string
+  outbound?: boolean
+  sprinterTopUp?: number
+  urvanTopUp?: number
+  bussing?: BussingRecord[]
+  bussingThisWeek?: BussingRecord
 }
 
 export interface Fellowship extends Church {
-  __typename: 'Fellowship'
+  __typename: ChurchLevel
   bacenta: Bacenta
   bankingCode: number
   vacationStatus: VacationStatusOptions
   meetingDay: {
     day: 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday'
   }
-}
-
-export interface Bacenta extends Church {
-  __typename: 'Bacenta'
-  vacationStatus: VacationStatusOptions
-  constituency: Constituency
-  arrivalsCodeOfTheDay: string
-  momoNumber: string
-  outbound: boolean
-  sprinterTopUp: number
-  urvanTopUp: number
-  bussing: BussingRecord[]
-  bussingThisWeek: BussingRecord
 }
 
 export interface CreativeArts extends Church {
@@ -155,8 +156,8 @@ export interface Ministry extends HigherChurch {
 
 export interface HubCouncil extends Church {
   __typename: 'HubCouncil'
-  hub: Hub
   ministry: Ministry
+  hubs: Hub[]
 }
 
 export interface Hub extends Church {
@@ -165,18 +166,18 @@ export interface Hub extends Church {
     latitude: number
     longitude: number
   }
-  hubFellowships?: HubFellowship[]
   activeHubFellowshipCount: number
   vacationHubFellowshipCount: number
-  hubCouncil: HubCouncil
-  creativeArts: Campus
   vacationStatus: VacationStatusOptions
   meetingDay: {
     day: 'Wednesday' | 'Friday' | 'Saturday'
   }
+  hubCouncil: HubCouncil
+  creativeArts: Campus
+  hubFellowships?: HubFellowship[]
 }
 
-export interface HubFellowship extends Church {
-  __typename: 'HubFellowship'
+export interface HubFellowship extends Fellowship {
+  __typename: ChurchLevel
   hub: Hub
 }
