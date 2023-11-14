@@ -126,6 +126,8 @@ export const permitAdmin = (churchLevel: ChurchLevel) => {
         'adminCouncil',
         'adminStream',
         'adminCampus',
+        'adminOversight',
+        'adminDenomination',
       ]
       break
     case 'Constituency':
