@@ -30,7 +30,7 @@ export interface Member {
   whatsappNumber: string
   phoneNumber: string
   fellowship: Church
-  ministry: Church
+  basonta: Church
 
   dob: TimeGraph
   title: Title
