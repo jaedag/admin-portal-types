@@ -136,20 +136,26 @@ export const getMemberDob = (displayMember: MemberType) => {
   return null
 }
 
-export const getWeekNumber = (date?: string) => {
-  const currentdate = date ? new Date(date) : new Date()
-  const oneJan = new Date(currentdate.getFullYear(), 0, 1)
-  let adjustedForMonday = 8 - oneJan.getDay() // Checking the number of days till Monday when the week starts
-  if (adjustedForMonday <= 0) adjustedForMonday += 7
-  if (adjustedForMonday >= 8) adjustedForMonday -= 7
-  oneJan.setDate(oneJan.getDate() + adjustedForMonday)
-  const numberOfDays = Math.floor(
-    (currentdate.getTime() - oneJan.getTime()) / (24 * 60 * 60 * 1000)
+export const getWeekNumber = (date?: Date | string) => {
+  const target = typeof date === 'string' ? new Date(date) : date || new Date()
+  target.setHours(0, 0, 0, 0)
+
+  // Thursday in current week decides the year.
+  target.setDate(target.getDate() + 3 - ((target.getDay() + 6) % 7))
+
+  // January 4 is always in week 1.
+  const firstThursday = new Date(target.getFullYear(), 0, 4)
+
+  // Adjust to Thursday in week 1 and count number of weeks from date to week 1.
+  return (
+    1 +
+    Math.ceil(
+      ((target.getTime() - firstThursday.getTime()) / 86400000 -
+        3 +
+        ((firstThursday.getDay() + 6) % 7)) /
+        7
+    )
   )
-
-  const result = Math.ceil(numberOfDays / 7)
-
-  return result
 }
 
 export const last3Weeks = () => {
