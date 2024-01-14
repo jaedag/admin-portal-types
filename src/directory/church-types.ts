@@ -1,3 +1,4 @@
+import { streamAccountType } from '..'
 import { Member } from './directory-types'
 import { TimeGraph } from './neo4j-types'
 import { BussingRecord, ServiceRecord } from './service-types'
@@ -85,7 +86,7 @@ export interface Stream extends Church {
   id: string
   name: string
   __typename: 'Stream'
-  bankAccount: string
+  bankAccount: streamAccountType
   campus: Campus
   vacationStatus: VacationStatusOptions
   meetingDay: {
