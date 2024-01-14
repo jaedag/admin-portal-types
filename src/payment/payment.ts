@@ -1,11 +1,18 @@
 export type Network = 'MTN' | 'Vodafone' | 'AirtelTigo' | 'Airtel' | 'Tigo'
 export type NetworkCode = 'mtn' | 'vod' | 'tgo'
 export type streamAccountType =
-  | 'aes_account'
-  | 'ges_account'
-  | 'hge_account'
-  | 'fle_account'
   | 'manual'
+  | 'aes_account'
+  | 'kwabenya_account'
+  | 'adenta_account'
+  | 'fle_account'
+  | 'oa_kumasi'
+  | 'kwabenya_morning_account'
+  | 'oa_ghnorth'
+  | 'oa_ghsouth'
+  | 'oa_gheast'
+  | 'oa_ghwest'
+  | 'oa_tarkwa'
 
 export const getMobileCode = (network: Network): NetworkCode => {
   switch (network) {
