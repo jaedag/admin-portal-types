@@ -29,7 +29,7 @@ export interface Member {
   pictureUrl: string
   whatsappNumber: string
   phoneNumber: string
-  fellowship: Church
+  bacenta: Church
   basonta: Church
 
   dob: TimeGraph
