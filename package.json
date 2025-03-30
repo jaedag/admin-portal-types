@@ -33,7 +33,8 @@
     "*.test.ts"
   ],
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/jd_addy"
+    "registry": "https://npm.pkg.github.com/jd_addy",
+    "access": "public"
   },
   "repository": {
     "type": "git",
