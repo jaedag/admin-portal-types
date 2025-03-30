@@ -6,7 +6,7 @@ const changelog = []
 const publish = [
   {
     name: 'publish',
-    command: 'npm run rollup && npm publish',
+    command: 'npm run rollup && npm publish  --access public',
     prefixColor: 'red',
   },
 ]
